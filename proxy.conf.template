@@ -1,0 +1,7 @@
+server {
+  listen $HEROKU_PORT;
+
+  location / {
+    proxy_pass       http://localhost:$APPLICATION_PORT;
+  }
+}
